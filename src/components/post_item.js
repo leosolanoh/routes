@@ -1,18 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-const PostItem = ( props ) => {
- const par = props.match.params;
-  return (
-     
-    <div>
-           {`Welcome Mr. ${par.username}`}
-           <hr/>
-           {`Details   Post No. ${par.id}`}
-
-    </div>
-  )
+const PostItem = (props) => {
+    return (
+        <div>
+           {props.match.params.id} -  {props.match.params.username}
+        </div>
+    )
 }
 
-export default PostItem
-
+export default PostItem;
